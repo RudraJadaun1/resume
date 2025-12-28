@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Embedded Systems & Hardware</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.4rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* List Layouts */
+        .list-entry {
+            margin-bottom: 1.5rem;
+            /* No border box, just clean spacing */
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.3rem;
+        }
+
+        .entry-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        .entry-meta {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .entry-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-pill {
+            background-color: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border);
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .skill-pill.highlight {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        /* Bullet lists for Awards/Leadership */
+        ul.simple-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.simple-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        ul.simple-list li::before {
+            content: "▹";
+            color: var(--accent);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 5rem;
+            font-family: var(--font-mono);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .entry-header { flex-direction: column; }
+            .entry-meta { margin-top: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Rudra Jadaun</h1>
+        <div class="subtitle">Embedded Systems Engineer | Hardware Security | PCB Design</div>
+        
+        <div class="social-links">
+            <a href="mailto:rudrajadaun09@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/Rudrajadaun1"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rudra-jadaun/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About</h2>
+        <p class="entry-desc" style="max-width: 100%;">
+            Passionate electronics enthusiast with a strong engineering-oriented focus on embedded systems, hardware security, and AI. 
+            Experienced in full-stack hardware development—from circuit design (KiCad) and PCB assembly to C++ firmware integration.
+            Proven leadership through organizing large-scale technical workshops and competitive achievements in national science exhibitions.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="list-entry">
+            <div class="entry-header">
+                <span class="entry-title">AEGIS</span>
+                <span class="entry-meta">Security Hardware</span>
+            </div>
+            <p class="entry-desc">Offline hardware TOTP & security device utilizing secure elements (ATECC608B) for robust hardware authentication.</p>
+            <div class="skills-container">
+                <span class="skill-pill highlight">Hardware Security</span>
+                <span class="skill-pill">PCB Design</span>
+                <span class="skill-pill">C++</span>
+            </div>
+        </div>
+
+        <div class="list-entry">
+            <div class="entry-header">
+                <span class="entry-title">Wisper</span>
+                <span class="entry-meta">Productivity System</span>
+            </div>
+            <p class="entry-desc">Hardware-based task manager and Pomodoro system designed to eliminate digital distractions using OLED interfaces.</p>
+            <div class="skills-container">
+                <span class="skill-pill highlight">Embedded C++</span>
+                <span class="skill-pill">OLED UI</span>
+                <span class="skill-pill">ESP32</span>
+            </div>
+        </div>
+
+        <div class="list-entry">
+            <div class="entry-header">
+                <span class="entry-title">Hackpad</span>
+                <span class="entry-meta">Input Device</span>
+            </div>
+            <p class="entry-desc">Custom hardware input device featuring mechanical switches, programmable macros, and rotary encoders.</p>
+            <div class="skills-container">
+                <span class="skill-pill">Prototyping</span>
+                <span class="skill-pill">Firmware</span>
+            </div>
+        </div>
+
+        <div class="list-entry">
+            <div class="entry-header">
+                <span class="entry-title">Productivity & UI Systems</span>
+                <span class="entry-meta">Embedded Prototypes</span>
+            </div>
+            <p class="entry-desc">Various ESP8266/ESP32 based productivity tools and optimized OLED-based UI system architectures.</p>
+            <div class="skills-container">
+                <span class="skill-pill">ESP8266</span>
+                <span class="skill-pill">NodeMCU</span>
+                <span class="skill-pill">UI/UX</span>
+            </div>
+        </div>
+
+        <div class="list-entry">
+            <div class="entry-header">
+                <span class="entry-title">Mini Kanban Board</span>
+                <span class="entry-meta">Web Application</span>
+            </div>
+            <p class="entry-desc">A lightweight, responsive Kanban board web application for efficient task tracking.</p>
+            <div class="skills-container">
+                <span class="skill-pill">Web Dev</span>
+                <span class="skill-pill">JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Arsenal</h2>
+        <div class="skills-container">
+            <span class="skill-pill highlight">Embedded C++</span>
+            <span class="skill-pill highlight">PCB Design (KiCad)</span>
+            <span class="skill-pill highlight">Hardware Security</span>
+            <span class="skill-pill">ESP32 / ESP8266</span>
+            <span class="skill-pill">RP2040</span>
+            <span class="skill-pill">Secure Elements (ATECC608B)</span>
+            <span class="skill-pill">RTC (DS3231)</span>
+            <span class="skill-pill">OLED UI Systems</span>
+            <span class="skill-pill">Soldering & Assembly</span>
+            <span class="skill-pill">Arduino Framework</span>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Awards & Certifications</h2>
+        <ul class="simple-list">
+            <li>
+                <span><strong>INSPIRE Award</strong> — Awarded 3 times for scientific innovation.</span>
+            </li>
+            <li>
+                <span><strong>NAEST</strong> (National Anveshika Experimental Skill Test) — 2nd Position Nationwide.</span>
+            </li>
+            <li>
+                <span><strong>State-level Science Fair</strong> — Selected 2 times to represent the region.</span>
+            </li>
+            <li>
+                <span>Multiple certified science & innovation competitions.</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="leadership">
+        <h2>Leadership & Outreach</h2>
+        <ul class="simple-list">
+            <li>
+                <span><strong>Workshop Organizer:</strong> Conducted 2 large-scale electronics & programming workshops (400+ students per workshop) across 5 schools.</span>
+            </li>
+            <li>
+                <span><strong>Class Head:</strong> Elected Class Head for 5 consecutive years & CCA Captain for 2 years.</span>
+            </li>
+            <li>
+                <span><strong>Scouts & Guides:</strong> Rajya Puraskar (Governor's Award) Certified. Completed Pravesh through Tritiya levels.</span>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>made with love</p>
+        <p>&copy; 2024 Rudra Jadaun. Open Source (Apache 2.0).</p>
+    </footer>
+</div>
+
+</body>
+</html>
